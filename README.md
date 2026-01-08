@@ -112,7 +112,7 @@ Running the main notebook reproduces all figures, models, and results reported i
 
 ---
 
-##📚 Background and References
+## 📚 Background and References
 
 The project builds on standard concepts from:
 
