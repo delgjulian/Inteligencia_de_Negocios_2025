@@ -1,63 +1,140 @@
-# Inteligencia_de_Negocios_UBA_2025
+# Predictive Modeling of Urban Ride Fares
 
-Repositorio del proyecto “Análisis predictivo de tarifas de viajes en la plataforma Uber: aplicaciones de modelos de aprendizaje automático en inteligencia de negocios”.
+This repository contains an applied data science project focused on the **prediction of ride fares in urban mobility platforms**, using historical trip data and a combination of statistical and machine learning models.
 
-Este trabajo desarrolla un enfoque empírico para el análisis y predicción de tarifas de viajes en la plataforma Uber, integrando técnicas de Business Intelligence y Machine Learning. El proyecto combina exploración de datos, modelado econométrico y algoritmos de aprendizaje automático para evaluar el desempeño predictivo de distintos enfoques.
-
-El estudio fue desarrollado en el marco de la Maestría en Economía Aplicada (FCE – Universidad de Buenos Aires) y se presenta aquí como un proyecto académico reproducible, con datos, código y documentación completa.
+The project integrates **Business Intelligence (BI)** and **supervised learning** techniques to evaluate and compare the predictive performance of linear, ensemble, and neural network models in a real-world pricing problem.
 
 ---
 
-## 📂 Estructura del repositorio
+## 📄 Project Overview
 
-Inteligencia_de_Negocios_2025/
+**Title:**  
+*Predictive Modeling of Urban Ride Fares: A Machine Learning Approach*
+
+The study analyzes ride-level data from an urban mobility platform (Uber, New York City) to model and predict trip fares based primarily on **geospatial information** and **trip distance**.
+
+The workflow combines data cleaning, feature engineering, exploratory analysis, and predictive modeling to assess how different approaches perform in estimating fares with minimal input information.
+
+---
+
+## 🎯 Objectives
+
+The main objectives of the project are to:
+
+- Model the relationship between **trip distance** and **fare amount**
+- Compare traditional econometric models with modern machine learning algorithms
+- Evaluate predictive performance using out-of-sample metrics
+- Analyze the trade-off between **interpretability** and **prediction accuracy**
+
+---
+
+## 🧠 Key Results (Executive Summary)
+
+- A strong and stable positive relationship is found between **distance traveled** and **ride fare**.
+- The baseline linear regression explains approximately **67% of the variance** in fares.
+- Machine learning models significantly outperform linear specifications:
+  - **Gradient Boosting** achieves the best overall performance  
+    (RMSE ≈ **2.46**, MAE ≈ **1.73**)
+  - Random Forest and Neural Networks show comparable accuracy
+- High predictive accuracy is achieved using a **small set of features**, highlighting the effectiveness of distance-based pricing models.
+
+---
+
+## 🧪 Methodology
+
+The analytical workflow follows a reproducible end-to-end pipeline:
+
+1. **Data Processing and Feature Engineering**
+   - Cleaning of geospatial coordinates
+   - Distance computation using the **Haversine formula**
+   - Detection and removal of outliers (IQR-based filtering)
+
+2. **Exploratory Data Analysis (EDA)**
+   - Distributional analysis of fares and distances
+   - Pearson and Spearman correlation matrices
+   - Spatial visualizations (scatter, density, hexbin maps)
+
+3. **Predictive Modeling**
+   - Ordinary Least Squares (OLS)
+   - LASSO regression
+   - Random Forest
+   - Gradient Boosting
+   - Feedforward Neural Networks (Keras)
+
+4. **Model Evaluation**
+   - Train/Test split (80/20)
+   - Performance metrics: **RMSE** and **MAE**
+   - Comparative assessment across models
+
+---
+
+## 📊 Dataset
+
+The analysis uses a public dataset of Uber trips in **New York City**, containing georeferenced pickup and dropoff locations and the final fare amount.
+
+After data cleaning and filtering, the final dataset includes approximately **180,000 valid observations**.
+
+---
+
+## 📁 Repository Structure
+
+predictive-analytics-ride-fare-estimation/
+├── README.md
+├── requirements.txt
 │
-├── data/                         # Dataset original (uber.csv)
+├── data/
+│   └── uber.csv
 │
 ├── notebooks/
-│   └── uber_fare_prediction.ipynb # Notebook principal (EDA, modelos y resultados)
+│   └── 00_end_to_end_ride_fare_prediction.ipynb
 │
-├── figures/                      # Gráficos y visualizaciones generadas
+├── figures/
+│   ├── correlation_matrices.png
+│   ├── spatial_distributions.png
+│   ├── model_comparisons.png
+│   └── ...
 │
-├── report/                       # Informe final (LaTeX y PDF)
-│
-├── README.md                     # Documentación del proyecto
-└── requirements.txt              # Dependencias del entorno (opcional)
+└── reports/
+    └── predictive-modeling-urban-ride-fares.pdf
 
 ---
 
-## 🧾 Descripción del trabajo
+## ▶️ Reproducibility
 
-El objetivo es **modelar y predecir el valor de las tarifas UBER** a partir de variables geoespaciales y de distancia, empleando las siguientes etapas:
+The project can be executed locally or in Google Colab using Python 3.10+.
 
-1. **Exploración y limpieza de datos (EDA)**
-   - Lectura del dataset `uber.csv`
-   - Generación de variable de distancia mediante la fórmula de *Haversine*
-   - Correlaciones de Pearson y Spearman  
-   - Detección y eliminación de *outliers*
+Main dependencies include:
 
-2. **Modelado tradicional**
-   - Regresión Lineal (MCO)
-   - LASSO (regularización con selección de variables)
-
-3. **Modelos de Aprendizaje Automático**
-   - Random Forest  
-   - Gradient Boosting  
-   - Redes Neuronales (Keras)
-
-4. **Evaluación de performance**
-   - Métricas: **RMSE** y **MAE**
-   - Comparación y conclusiones de cada modelo
-
----
-
-## ⚙️ Reproducibilidad
-
-### 🔹 Requisitos básicos
-
-Ejecutar en **Google Colab** o entorno local con Python 3.10+  
-Dependencias principales:
-
-```bash
 pip install numpy pandas scikit-learn tensorflow matplotlib seaborn
 
+
+Running the main notebook reproduces all figures, models, and results reported in the final document.
+
+---
+
+##📚 Background and References
+
+The project builds on standard concepts from:
+
+Business Intelligence and predictive analytics
+
+Econometric regression models
+
+Ensemble learning (Random Forest, Gradient Boosting)
+
+Neural networks for regression tasks
+
+Urban mobility and pricing analytics
+
+---
+## 📝 License
+
+This repository is released under the MIT License, allowing free academic and research use, modification, and redistribution.
+
+---
+
+## 👤 Author
+
+Julián Alberto Delgadillo Marín
+M.Sc. in Applied Economics (candidate)
+University of Buenos Aires (UBA)
