@@ -1,27 +1,28 @@
 # Inteligencia_de_Negocios_UBA_2025
 
-Repositorio privado del trabajo final **“ANÁLISIS PREDICTIVO DE TARIFAS DE VIAJES EN LA PLATAFORMA UBER: APLICACIONES DE MODELOS DE APRENDIZAJE AUTOMÁTICO EN INTELIGENCIA DE NEGOCIOS”**.
+Repositorio del proyecto “Análisis predictivo de tarifas de viajes en la plataforma Uber: aplicaciones de modelos de aprendizaje automático en inteligencia de negocios”.
 
-Este proyecto corresponde al **remanente octubre 2025** de la asignatura **Inteligencia de Negocios**, Maestría en Economía Aplicada (FCE–UBA).  
-Integra técnicas de *Business Intelligence* y *Machine Learning* para el análisis y predicción de tarifas en la plataforma **UBER**, utilizando modelos lineales, ensambles y redes neuronales.
+Este trabajo desarrolla un enfoque empírico para el análisis y predicción de tarifas de viajes en la plataforma Uber, integrando técnicas de Business Intelligence y Machine Learning. El proyecto combina exploración de datos, modelado econométrico y algoritmos de aprendizaje automático para evaluar el desempeño predictivo de distintos enfoques.
+
+El estudio fue desarrollado en el marco de la Maestría en Economía Aplicada (FCE – Universidad de Buenos Aires) y se presenta aquí como un proyecto académico reproducible, con datos, código y documentación completa.
 
 ---
 
 ## 📂 Estructura del repositorio
 
-Inteligencia_de_Negocios_UBA_2025/
+Inteligencia_de_Negocios_2025/
 │
-├── data/ # Dataset original (uber.csv)
+├── data/                         # Dataset original (uber.csv)
 │
 ├── notebooks/
-│ └── tp_final_bi_2025_delgadillo.ipynb # Notebook principal (EDA, modelos, resultados)
+│   └── uber_fare_prediction.ipynb # Notebook principal (EDA, modelos y resultados)
 │
-├── figures/ # Gráficos y visualizaciones generadas
+├── figures/                      # Gráficos y visualizaciones generadas
 │
-├── Informe_Final_Remanente/ # Informe LaTeX y versión PDF final
+├── report/                       # Informe final (LaTeX y PDF)
 │
-├── README.md # Este archivo de documentación
-└── requirements.txt # Dependencias del entorno (opcional)
+├── README.md                     # Documentación del proyecto
+└── requirements.txt              # Dependencias del entorno (opcional)
 
 ---
 
@@ -59,3 +60,4 @@ Dependencias principales:
 
 ```bash
 pip install numpy pandas scikit-learn tensorflow matplotlib seaborn
+
